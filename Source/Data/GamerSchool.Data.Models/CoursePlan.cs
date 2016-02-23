@@ -8,11 +8,11 @@
 
     public class CoursePlan : BaseModel<int>
     {
-        private ICollection<GameLessons> lessons;
+        private ICollection<GameLesson> lessons;
 
         public CoursePlan()
         {
-            this.lessons = new HashSet<GameLessons>();
+            this.lessons = new HashSet<GameLesson>();
         }
 
         [Required]
@@ -27,7 +27,7 @@
 
         public virtual ApplicationUser Creator { get; set; }
 
-        public virtual ICollection<GameLessons> Lessons
+        public virtual ICollection<GameLesson> Lessons
         {
             get { return this.lessons; }
             set { this.lessons = value; }

@@ -16,7 +16,7 @@
     {
 
         private ICollection<Tutorial> tutorials;
-        private ICollection<GameLessons> gameLessons;
+        private ICollection<GameLesson> gameLessons;
         private ICollection<GameCourse> coursesCouaching;
         private ICollection<GameCourse> coursesTraining;
         private ICollection<Comment> comments;

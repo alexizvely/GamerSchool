@@ -26,7 +26,7 @@
 
         public IDbSet<GameCourse> GameCourses { get; set; }
 
-        public IDbSet<GameLessons> GameLessons { get; set; }
+        public IDbSet<GameLesson> GameLessons { get; set; }
 
         public IDbSet<CoursePlan> CoursePlans { get; set; }
 

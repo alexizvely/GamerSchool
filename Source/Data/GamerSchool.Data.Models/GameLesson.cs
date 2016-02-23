@@ -6,7 +6,7 @@ namespace GamerSchool.Data.Models
     using Common;
     using Common.Models;
 
-    public class GameLessons : InteractiveEntity
+    public class GameLesson : InteractiveEntity
     {
         [MaxLength(ValidationConstants.MaxLessonYoutubeVideoIdLength, ErrorMessage = ValidationConstants.MaxLengthErrorMessage)]
         public string VideoTutorialId { get; set; }
