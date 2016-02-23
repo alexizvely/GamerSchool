@@ -210,12 +210,16 @@
     <Compile Include="App_Start\SmsService.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AcademyController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\FPSController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="App_Start\GlimpseSecurityPolicy.cs" />
+    <Compile Include="Controllers\StrategyController.cs" />
+    <Compile Include="Controllers\TutorialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -541,11 +545,15 @@
     <Folder Include="Content\Kendo\Silver\" />
     <Folder Include="Content\Kendo\textures\" />
     <Folder Include="Content\Kendo\Uniform\" />
+    <Folder Include="Views\Academy\" />
     <Folder Include="Views\Base\" />
+    <Folder Include="Views\FPS\" />
     <Folder Include="Views\Shared\DisplayTemplates\Category\" />
     <Folder Include="Views\Shared\DisplayTemplates\Like\" />
     <Folder Include="Views\Shared\EditorTemplates\Category\" />
     <Folder Include="Views\Shared\EditorTemplates\Like\" />
+    <Folder Include="Views\Strategy\" />
+    <Folder Include="Views\Tutorial\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
