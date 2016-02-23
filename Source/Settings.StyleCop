@@ -1,4 +1,4 @@
-<StyleCopSettings Version="105">
+﻿<StyleCopSettings Version="105">
   <GlobalSettings>
     <IntegerProperty Name="MaxViolationCount">10000</IntegerProperty>
     <CollectionProperty Name="RecognizedWords">
