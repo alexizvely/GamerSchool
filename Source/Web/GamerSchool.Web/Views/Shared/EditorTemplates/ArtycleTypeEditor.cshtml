@@ -1,0 +1,11 @@
+@using GamerSchool.Data.Models
+@using GamerSchool.Web.Infrastructure
+@model GamerSchool.Data.Models.ArticleType
+
+@(Html.Kendo().DropDownListFor(m => m)
+        .DataTextField("Text")
+        .DataValueField("Value")
+        .BindTo(Extensions.EnumToSelectList(typeof(ArticleType)))
+)
+
+

@@ -1,0 +1,101 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    padding-top: 80px;
+    /*padding-bottom: 20px;*/
+    margin-bottom: 80px;
+}
+
+.footer {
+ 
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+}
+
+.footer > p {
+    padding-top: 1.3em;
+       border-top: 1px solid #808080;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default 
+input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+.left-margin {
+    margin-left: 15px;
+}
+
+.right-margin {
+    margin-right: 15px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.dropdown-menu {
+    -moz-min-width: 200px;
+    -ms-min-width: 200px;
+    -o-min-width: 200px;
+    -webkit-min-width: 200px;
+    min-width: 200px;
+}
+
+.no-wrap {
+    white-space: nowrap;
+}
+
+.wrap {
+    white-space: normal;
+}
+
+.fa-in-dropdown {
+    margin-top: 6px;
+}
+
+.wrap-words {
+    overflow: hidden !important;
+    -moz-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+.article-preview-body {
+    height: 150px;
+}
+
+.article-preview-image {
+    max-height: 80px;
+    border-top: 1px solid #EEEEEE;
+}
+
+hr {
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+img {
+    max-height: 400px;
+}
