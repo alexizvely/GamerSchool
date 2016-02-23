@@ -1,25 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GamerSchool.Data.Models
+﻿namespace GamerSchool.Data.Models
 {
-    class Tutorial
-    {
-    }
 
     using System.Collections.Generic;
 
-    using H8QMedia.Data.Common.Models;
+    using Common.Models;
 
-    public class Article : InteractiveEntity
+    public class Tutorial : InteractiveEntity
     {
         public string AuthorId { get; set; }
 
         public virtual ApplicationUser Author { get; set; }
 
-        public ArticleType Type { get; set; }
+        public TutorialType Type { get; set; }
     }
 }

@@ -1,9 +1,9 @@
 ﻿namespace GamerSchool.Services.Data
 {
     using System.Linq;
+    using Contracts;
     using GamerSchool.Data.Common.Repositories;
     using GamerSchool.Data.Models;
-    using GamerSchool.Services.Data.Contracts;
 
     public class MerchendisesService : IMerchendisesService
     {

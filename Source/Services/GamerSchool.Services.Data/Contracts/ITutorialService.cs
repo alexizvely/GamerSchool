@@ -3,7 +3,7 @@
     using System.Linq;
     using GamerSchool.Data.Models;
 
-    public interface IArticlesService
+    public interface ITutorialService
     {
         IQueryable<Tutorial> GetById(int id);
 

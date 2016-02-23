@@ -1,6 +1,7 @@
 ﻿namespace GamerSchool.Services.Data.Contracts
 {
     using System.Linq;
+    using GamerSchool.Data.Models;
 
     public interface ICategoriesService
     {

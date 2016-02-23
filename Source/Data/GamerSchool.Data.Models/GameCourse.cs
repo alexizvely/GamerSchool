@@ -32,11 +32,11 @@ namespace GamerSchool.Data.Models
 
         public virtual ICollection<ApplicationUser> Coaches
         {
-            get { return this.trainers; }
-            set { this.trainers = value; }
+            get { return this.coaches; }
+            set { this.coaches = value; }
         }
 
-        public virtual ICollection<CourseObjective> Objectives
+        public virtual ICollection<CoursePlan> Objectives
         {
             get { return this.objectives; }
             set { this.objectives = value; }

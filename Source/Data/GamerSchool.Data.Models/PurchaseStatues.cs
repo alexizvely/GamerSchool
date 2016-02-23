@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GamerSchool.Data.Models
+﻿namespace GamerSchool.Data.Models
 {
-    class PurchaseStatues
+    public enum PurchaseStatus
     {
+        Pending = 0,
+        Confirmed = 1,
+        Paid = 2,
+        Processing = 3,
+        Dispatched = 4,
+        Delivered = 5,
+        Returned = 6
     }
 }
