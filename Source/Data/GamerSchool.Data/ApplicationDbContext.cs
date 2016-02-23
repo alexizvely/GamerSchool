@@ -16,14 +16,34 @@
         {
         }
 
+        public IDbSet<Tutorial> Tutorials { get; set; }
+
+        public IDbSet<TutorialComment> TutorialComments { get; set; }
+
+        public IDbSet<Category> Categories { get; set; }
+
+        public IDbSet<Comment> Comments { get; set; }
+
+        public IDbSet<GameCourse> GameCourses { get; set; }
+
+        public IDbSet<GameLessons> GameLessons { get; set; }
+
+        public IDbSet<CoursePlan> CoursePlans { get; set; }
+
         public IDbSet<City> Cities { get; set; }
 
         public IDbSet<Address> Addresses { get; set; }
 
+        public IDbSet<Like> Likes { get; set; }
+
+        public IDbSet<Merchendise> Merchendies { get; set; }
+
+        public IDbSet<Purchase> Purchases { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
-        }      
+        }
 
         public override int SaveChanges()
         {

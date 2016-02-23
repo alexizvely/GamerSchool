@@ -15,8 +15,27 @@
     public class ApplicationUser : IdentityUser, IAuditInfo, IDeletableEntity, ITKeyEntity<string>
     {
 
+        private ICollection<Tutorial> tutorials;
+        private ICollection<GameLessons> gameLessons;
+        private ICollection<GameCourse> coursesCouaching;
+        private ICollection<GameCourse> coursesTraining;
+        private ICollection<Comment> comments;
+        private ICollection<Like> likes;
+        private ICollection<Merchendise> merchendise;
+        private ICollection<Purchase> purchases;
+        private ICollection<Address> addresses;
+
+
         public ApplicationUser()
         {
+            this.tutorials = new HashSet<Tutorial>();
+            this.comments = new HashSet<Comment>();
+            this.coursesCouaching = new HashSet<GameCourse>();
+            this.coursesTraining = new HashSet<GameCourse>();
+            this.likes = new HashSet<Like>();
+            this.merchendise = new HashSet<Merchendise>();
+            this.purchases = new HashSet<Purchase>();
+            this.addresses = new HashSet<Address>();
         }
 
         [MaxLength(ValidationConstants.MaxUserNameLength, ErrorMessage = ValidationConstants.MaxLengthErrorMessage)]
@@ -25,8 +44,63 @@
         [MaxLength(ValidationConstants.MaxUserNameLength, ErrorMessage = ValidationConstants.MaxLengthErrorMessage)]
         public string LastName { get; set; }
 
-
         public DateTime? DateOfBirth { get; set; }
+
+        public DateTime CreatedOn { get; set; }
+
+        public DateTime? ModifiedOn { get; set; }
+
+        public bool IsDeleted { get; set; }
+
+        public DateTime? DeletedOn { get; set; }
+
+        public virtual ICollection<Tutorial> Articles
+        {
+            get { return this.tutorials; }
+            set { this.tutorials = value; }
+        }
+
+        public virtual ICollection<Comment> Comments
+        {
+            get { return this.comments; }
+            set { this.comments = value; }
+        }
+
+        public virtual ICollection<GameCourse> CoursesTraining
+        {
+            get { return this.coursesCouaching; }
+            set { this.coursesCouaching = value; }
+        }
+
+        public virtual ICollection<GameCourse> CoursesStuding
+        {
+            get { return this.coursesTraining; }
+            set { this.coursesTraining = value; }
+        }
+
+        public virtual ICollection<Merchendise> SellingItems
+        {
+            get { return this.merchendise; }
+            set { this.merchendise = value; }
+        }
+
+        public virtual ICollection<Like> Likes
+        {
+            get { return this.likes; }
+            set { this.likes = value; }
+        }
+
+        public virtual ICollection<Purchase> Purchases
+        {
+            get { return this.purchases; }
+            set { this.purchases = value; }
+        }
+
+        public virtual ICollection<Address> Addresses
+        {
+            get { return this.addresses; }
+            set { this.addresses = value; }
+        }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
@@ -36,13 +110,5 @@
             // Add custom user claims here
             return userIdentity;
         }
-
-        public DateTime CreatedOn { get; set; }
-
-        public DateTime? ModifiedOn { get; set; }
-
-        public bool IsDeleted { get; set; }
-
-        public DateTime? DeletedOn { get; set; }
     }
 }
