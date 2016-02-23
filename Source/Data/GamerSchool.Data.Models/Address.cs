@@ -17,7 +17,7 @@
         [Required]
         [MinLength(ValidationConstants.MinAddressLineLength, ErrorMessage = ValidationConstants.MinLengthErrorMessage)]
         [MaxLength(ValidationConstants.MaxAddressLineLength, ErrorMessage = ValidationConstants.MaxLengthErrorMessage)]
-        public string Address { get; set; }
+        public string AddressText { get; set; }
 
         [Required]
         [MinLength(ValidationConstants.MinTelephoneNumberLength, ErrorMessage = ValidationConstants.MinLengthErrorMessage)]

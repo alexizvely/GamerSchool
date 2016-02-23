@@ -16,10 +16,14 @@
         {
         }
 
+        public IDbSet<City> Cities { get; set; }
+
+        public IDbSet<Address> Addresses { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
-        }
+        }      
 
         public override int SaveChanges()
         {
