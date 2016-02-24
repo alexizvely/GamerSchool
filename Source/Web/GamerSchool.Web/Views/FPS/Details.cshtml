@@ -3,21 +3,22 @@
 @{
     ViewBag.Title = "Details for " + Model.Title;
 }
-<div class="row">
-    @Html.DisplayFor(x => Model, DisplayTemplatesPaths.TutorialViewModelDetailed)
-</div>
-<div class="row">
-    <div class="col-md-6">
-        <div class="col-md-12">
-            <h5>Comments</h5>
-        </div>
-        @if (User.Identity.IsAuthenticated)
-        {
+<div class="well">
+    <div class="row">
+        @Html.DisplayFor(x => Model, DisplayTemplatesPaths.TutorialViewModelDetailed)
+    </div>
+    <div class="row">
+        <div class="col-md-6">
             <div class="col-md-12">
-                @Html.Partial("~/Areas/Users/Views/Comment/_CreateCommentPartial.cshtml", new InputCommentViewModelCreate(Model.Id))
+                <h5>Comments</h5>
             </div>
-        }
-        @{Html.RenderAction("GetPageCommentsPartial", "Comment", new { area = "Users", articleId = Model.Id });}
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div class="col-md-12">
+                    @Html.Partial("~/Areas/Users/Views/Comment/_CreateCommentPartial.cshtml", new InputCommentViewModelCreate(Model.Id))
+                </div>
+            }
+            @{Html.RenderAction("GetPageCommentsPartial", "Comment", new { area = "Users", articleId = Model.Id });}
+        </div>
     </div>
 </div>
-

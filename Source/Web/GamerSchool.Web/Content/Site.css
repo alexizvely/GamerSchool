@@ -12,6 +12,14 @@
    opacity: 0.6;
 }
 
+.panel-default>.panel-heading, .panel-default>.panel-footer{
+    color:#888888;
+    background-color: #9AB0BD;
+    opacity: 0.8;
+    border-color:#282828
+
+}
+
 body, #navbar {
     -moz-min-width: 530px;
     -ms-min-width: 530px;
@@ -23,6 +31,10 @@ body, #navbar {
 
 .btn{
     opacity: 0.5;
+}
+
+.panel-heading{
+   background-color: rgba(195,195,195, 0.8);
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

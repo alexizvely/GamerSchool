@@ -1,32 +1,30 @@
 ﻿@model GamerSchool.Web.ViewModels.Comment.CommentViewModel
 
-<li class="list-group-item col-md-12">
+<li class="list-group-item col-md-12 well">
 
-    <div class="row">
-        <div class="col-md-12">
-
-            <p class="">@Model.Content</p>
+        <div class="row">
+            <div class="col-md-12 panel-heading well">
+                <p class="">@Model.Content</p>
+            </div>
         </div>
-    </div>
-    <hr />
-    <div class="row clearfix text-left">
-        <div class="col-md-12">
-            <span>@Model.CreatedOn</span>
-            <strong>by @Model.UserName</strong>
-
-            @if (User.Identity.IsAuthenticated && User.Identity.Name == Model.UserName)
+        <hr />
+        <div class="row clearfix text-left panel-body">
+            <div class="col-md-12">
+                <span>@Model.CreatedOn</span>
+                <strong>by @Model.UserName</strong>
+                @if (User.Identity.IsAuthenticated && User.Identity.Name == Model.UserName)
             {
-                <span>
-                    @Ajax.ActionLink("Delete", "Delete", "Comment", new { area = "Users", id = Model.Id, articleID = Model.EntityId }, new AjaxOptions
+                    <span>
+                        @Ajax.ActionLink("Delete", "Delete", "Comment", new { area = "Users", id = Model.Id, articleID = Model.EntityId }, new AjaxOptions
                {
                    HttpMethod = "GET",
                    InsertionMode = InsertionMode.Replace,
                    UpdateTargetId = "comments"
                }, new { @class = "pull-right text-danger" })
-                </span>
-            }
+                    </span>
+                }
+            </div>
         </div>
-    </div>
 
 </li>
 

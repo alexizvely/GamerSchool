@@ -4,7 +4,7 @@
     ViewBag.Title = "Strategy";
 }
 <h2 class="text-center">Strategies</h2>
-<div class="container">
+<div class="container well">
     @if (Request.IsAuthenticated && (User.IsInRole(ApplicationRoles.Admin) || User.IsInRole(ApplicationRoles.Designer)))
     {
         <div calss="row text-center">

@@ -2,7 +2,7 @@
 @model GamerSchool.Web.ViewModels.Strategy.StrategyIndexViewModel
 <hr />
 @Html.Partial("_PaginationPartial", Model.PaginationModel)
-<div class="row">
+<div class="row panel">
     @foreach (var art in Model.ArtArticles)
     {
         <div class="col-md-6 well">
