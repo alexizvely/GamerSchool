@@ -248,6 +248,11 @@
     <Compile Include="ViewModels\Image\ImageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\backgrounds\bg.jpg" />
+    <Content Include="Content\backgrounds\public\cloud-01.png" />
+    <Content Include="Content\backgrounds\public\cloud-02.png" />
+    <Content Include="Content\backgrounds\public\cloud-03.png" />
+    <Content Include="Content\backgrounds\public\cloud-04.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -333,9 +338,16 @@
     <Content Include="Content\Kendo\kendo.silver.mobile.min.css" />
     <Content Include="Content\Kendo\kendo.uniform.min.css" />
     <Content Include="Content\Kendo\kendo.uniform.mobile.min.css" />
+    <Content Include="Content\public\color.css" />
+    <Content Include="Content\public\custom.css" />
+    <Content Include="Content\public\style.css" />
+    <Content Include="Content\public\title-size.css" />
+    <Content Include="Content\public\vendor.css" />
+    <Content Include="Content\theme\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\ionicons.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Libraries\Kendo\Kendo.Mvc.dll" />
@@ -430,7 +442,16 @@
     <Content Include="Content\Kendo\kendo.silver.mobile.min.css.map" />
     <Content Include="Content\Kendo\kendo.uniform.min.css.map" />
     <Content Include="Content\Kendo\kendo.uniform.mobile.min.css.map" />
+    <Content Include="fonts\ionicons.eot" />
+    <Content Include="fonts\ionicons.ttf" />
+    <Content Include="fonts\ionicons.woff" />
+    <Content Include="fonts\ytp-regular.eot" />
+    <Content Include="fonts\ytp-regular.ttf" />
+    <Content Include="fonts\ytp-regular.woff" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
+    <Content Include="Scripts\common\main.js" />
+    <Content Include="Scripts\common\variables.js" />
+    <Content Include="Scripts\common\vendor\vendor.js" />
     <Content Include="Scripts\jquery-2.2.0.js" />
     <Content Include="Scripts\jquery-2.2.0.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -443,6 +464,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Kendo\kendo.all.min.js" />
     <Content Include="Scripts\Kendo\kendo.aspnetmvc.min.js" />
+    <Content Include="Scripts\public\variables.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -522,6 +544,7 @@
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Shared\_NavbarPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

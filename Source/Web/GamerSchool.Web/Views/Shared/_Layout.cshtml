@@ -2,54 +2,46 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - GamerSchool</title>
-    @Styles.Render("~/Content/kendo-css")
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>@ViewBag.Title - Gamer School</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/jqueryajax")
-    @Scripts.Render("~/bundles/kendo")
+    @Styles.Render("~/Content/public")
 </head>
 <body>
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("GamerSchool", "Index", "Home", new { Area = "" }, new { @class = "navbar-brand" })
+    @Html.Partial("_NavbarPartial")
+    <!-- loader -->
+    <div id="site-loader">
+        <div class="loader"></div>
+    </div>
+    <!-- loader -->
+    <div id="site-wrap">
+        <div id="bg">
+            <img src="~/Content/backgrounds/bg.jpg" id="img"/>
+            <div id="overlay"></div>
+            <div id="effect">
+                <img src="~/Content/backgrounds/public/cloud-01.png" alt="" id="cloud1">
+                <img src="~/Content/backgrounds/public/cloud-02.png" alt="" id="cloud2">
+                <img src="~/Content/backgrounds/public/cloud-03.png" alt="" id="cloud3">
+                <img src="~/Content/backgrounds/public/cloud-04.png" alt="" id="cloud4">
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { Area = "" }, new { @class = "text-danger" })</li>
-                    <li>@Html.ActionLink("About", "Index", "About", new { Area = "" }, null)</li>
-                    <li>@Html.ActionLink("Art", "Index", "Art", new { Area = "" }, null)</li>
-                    <li>@Html.ActionLink("Design", "Index", "Design", new { Area = "" }, null)</li>
-                    <li>@Html.ActionLink("School", "Index", "School", new { Area = "" }, null)</li>
-                    <li>@Html.ActionLink("Shop", "Index", "Shop", new { Area = "" }, null)</li>
-                    <li>@Html.ActionLink("Contacts", "Index", "Contacts", new { Area = "" }, null)</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-                @Html.Partial("_AdminPartial")
-              
-            </div>
+            <canvas id="js-canvas"></canvas>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <footer>
+                <hr />
+                <p class="text-center">Pavel Pavlov &copy; @DateTime.Now.Year - Gamer School</p>
+            </footer>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-    </div>
-
-    <footer class="footer text-center container">
-        <p>&copy; @DateTime.Now.Year - GamerSchool powered by Ivo Paounov</p>
-    </footer>
-
-    @Scripts.Render("~/bundles/jqueryval")
- 
+    @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/public")
     @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 </html>

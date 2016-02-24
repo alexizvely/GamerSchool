@@ -1,10 +1,48 @@
-﻿@*@model GamerSchool.Web.ViewModels.Home.IndexViewModel*@
-
-@{
-    ViewBag.Title = "Home Page";
+﻿@{
+    ViewBag.Title = "Index";
 }
-<h1>HOME Public</h1>
-
-@(Html.Kendo()
-.DatePicker()
-.Name("datepicker"))
+<div class="section-wrap panel">
+    <div class="section-cell panel">
+        <div class="container panel">
+            <div class="section-header row text-center panel">
+                <div class="col-xs-12 panel">
+                    <h2 class="text-center">Mega sure! Mega giga sure!</h2>
+                    <br />
+                    <div class="well">
+                        <h4>Something something</h4>
+                        <div class="text-center">
+                            <p>sure sure sure sure</p>
+                            <p>sure sure sure sure sure sure sure sure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-main row panel">
+                <div class="col-xs-12 panel-body">
+                    <br />
+                    <div class="well">
+                        <h4>Ultra giga hipper sure</h4>
+                        <div class="text-center">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                            PageMaker including versions of Lorem Ipsum.
+                        </div>
+                    </div>
+                    <br />
+                    <div class="well">
+                        <h4>SURE SURE sure</h4>
+                        <div class="text-center">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="text-center">
+                        @Html.ActionLink("Log in", "Login", "Account", null, new { @class = "btn btn-default btn-block" })
+                        @Html.ActionLink("Join us!", "Register", "Account", null, new { @class = "btn btn-default btn-block" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
