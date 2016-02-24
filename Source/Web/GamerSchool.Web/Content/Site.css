@@ -32,7 +32,11 @@ body, #navbar {
     white-space: normal;
 }
 
-.panel, .well {
+.well {
+    background-color: rgba(154, 176, 189, 0.3);
+}
+
+.panel {
     background-color: transparent;
 }
 
@@ -245,11 +249,11 @@ hr {
 }
 
 small, h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-    color: #ccc;
+    color: #3d3d3d;
 }
 
 input {
-    color: #888;
+    color: #7a7a7a;
 }
 
 input.no-max-width, textarea.no-max-width {

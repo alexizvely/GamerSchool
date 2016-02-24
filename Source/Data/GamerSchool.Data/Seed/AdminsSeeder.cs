@@ -14,12 +14,12 @@
             var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
           //  var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
 
-            if (!context.Users.Any(u => u.UserName == "IvkoBivko"))
+            if (!context.Users.Any(u => u.UserName == "PavelPavlov"))
             {
                 var user = new ApplicationUser
                 {
-                    Email = "ivo.paunov@gmail.com",
-                    UserName = "IvkoBivko",
+                    Email = "pavel.pavlov@gmail.com",
+                    UserName = "PavelPavlov",
                     CreatedOn = DateTime.Now
                 };
 
