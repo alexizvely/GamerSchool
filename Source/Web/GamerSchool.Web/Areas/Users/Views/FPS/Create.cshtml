@@ -1,0 +1,14 @@
+﻿@using GamerSchool.Web.Infrastructure.Constants
+@model GamerSchool.Web.ViewModels.Tutorial.TutorialInputViewModel
+@{
+    ViewBag.Title = "FPS - Create new tutorial";
+}
+@using (Html.BeginForm("Create", "FPS", FormMethod.Post, new { enctype = "multipart/form-data", @class = "full-width" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.EditorFor(model => Model, EditorTemplatesPaths.InputTutorialViewModelCreate)
+}
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

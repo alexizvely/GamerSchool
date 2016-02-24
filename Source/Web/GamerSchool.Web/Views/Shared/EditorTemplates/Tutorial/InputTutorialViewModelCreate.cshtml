@@ -1,9 +1,8 @@
-@using GamerSchool.Web.ViewModels.Image
-@model GamerSchool.Web.ViewModels.Article.ArticleInputModel
+@model GamerSchool.Web.ViewModels.Tutorial.TutorialInputViewModel
 
 <div class="container-fluid">
     <div class="row text-left">
-        <h3>Update article  - @Model.Title</h3>
+        <h3>Add New tutorial</h3>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="row form-horizontal">
@@ -36,47 +35,14 @@
                             @Html.ValidationMessageFor(model => model.Files, "", new { @class = "text-danger" })
                         </div>
                     </div>
-
-                    <div class="row">
-                        <div class="col-md-10 col-md-offset-2">
-                            @foreach (var image in Model.Images)
-                            {
-                                <div class="col-md-2" id="img-@image.Id">
-                                    @Ajax.ActionLink("X", "Delete", "Image", new { àrea = "Users", id = image.Id },
-                                        new AjaxOptions
-                                        {
-                                            HttpMethod = "POST",
-                                            InsertionMode = InsertionMode.ReplaceWith,
-                                            OnComplete = "OnAjaxRequestSuccess",
-                                            Confirm = "Are you sure you want delete that image?"
-
-                                        }, new { @class = "btn btn-danger" })
-
-                                   @* @Html.AntiForgeryToken()*@
-
-                                    @Html.EditorFor(x => image, EditorTemplatesPaths.InputImageViewModellEdit)
-
-
-                                </div>
-                            }
-                        </div>
-                    </div>
-                    <br />
                     <div class="form-group text-left">
                         <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Update" class="btn btn-warning full-width" />
+                            <input type="submit" value="Create" class="btn btn-info full-width" />
                         </div>
                     </div>
                 </fieldset>
-
             </div>
         </div>
     </div>
 </div>
 
-<script type="text/javascript">
-    function OnAjaxRequestSuccess(data) {
-        $("#img-" + data.responseText).remove();
-        console.log("This is the OnSuccessCallback: " + data);
-    }
-</script>

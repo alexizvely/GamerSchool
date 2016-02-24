@@ -2,8 +2,8 @@
 {
     public class EditorTemplatesPaths
     {
-        public const string InputArticleViewModelCreate = "Article/InputArticleViewModelCreate";
-        public const string InputArticleViewModelEdit = "Article/InputArticleViewModelEdit";
+        public const string InputTutorialViewModelCreate = "Tutorial/InputTutorialViewModelCreate";
+        public const string InputTutorialViewModelEdit = "Tutorial/InputTutorialViewModelEdit";
         public const string InputImageViewModellEdit = "Image/InputImageViewModellEdit";
         public const string SellingItemInputModelCreate = "SellingItem/SellingItemInputModelCreate";
         public const string SellingItemInputModelEdit = "SellingItem/SellingItemInputModelEdit";

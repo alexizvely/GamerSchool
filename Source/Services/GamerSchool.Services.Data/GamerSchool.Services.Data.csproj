@@ -60,7 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CategoriesService.cs" />
+    <Compile Include="CommentsService.cs" />
     <Compile Include="Contracts\ICategoriesService.cs" />
+    <Compile Include="Contracts\ICommentsService.cs" />
     <Compile Include="Contracts\ICoursePlansService.cs" />
     <Compile Include="Contracts\IGameCoursesService.cs" />
     <Compile Include="Contracts\IGameLessonsService.cs" />

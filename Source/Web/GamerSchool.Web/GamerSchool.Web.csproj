@@ -209,6 +209,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SmsService.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Users\Controllers\CommentController.cs" />
+    <Compile Include="Areas\Users\Controllers\FPSController.cs" />
+    <Compile Include="Areas\Users\UsersAreaRegistration.cs" />
+    <Compile Include="Areas\Users\ViewModels\Comment\InputCommentViewModelCreate.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AcademyController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -244,10 +248,13 @@
     <Compile Include="ViewModels\Comment\CommentInputModel.cs" />
     <Compile Include="ViewModels\Comment\CommentViewModel.cs" />
     <Compile Include="ViewModels\Common\PaginationViewModel.cs" />
+    <Compile Include="ViewModels\FPS\FPSIndexViewModel.cs" />
     <Compile Include="ViewModels\GameCourse\SimpleGameCourseViewModel.cs" />
     <Compile Include="ViewModels\Home\IndexViewModel.cs" />
     <Compile Include="ViewModels\Image\ImageViewModel.cs" />
     <Compile Include="ViewModels\Tutorial\SimpleTutorialViewModel.cs" />
+    <Compile Include="ViewModels\Tutorial\TutorialInputViewModel.cs" />
+    <Compile Include="ViewModels\Tutorial\TutorialViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\backgrounds\bg.jpg" />
@@ -450,6 +457,17 @@
     <Content Include="fonts\ytp-regular.eot" />
     <Content Include="fonts\ytp-regular.ttf" />
     <Content Include="fonts\ytp-regular.woff" />
+    <Content Include="Areas\Users\Views\web.config" />
+    <Content Include="Areas\Users\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Users\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Users\Views\Comment\_CreateCommentPartial.cshtml" />
+    <Content Include="Areas\Users\Views\FPS\Index.cshtml" />
+    <Content Include="Areas\Users\Views\FPS\Create.cshtml" />
+    <Content Include="Areas\Users\Views\FPS\Edit.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\common\main.js" />
     <Content Include="Scripts\common\variables.js" />
@@ -466,6 +484,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Kendo\kendo.all.min.js" />
     <Content Include="Scripts\Kendo\kendo.aspnetmvc.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\public\variables.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config">
@@ -501,12 +520,12 @@
     <Content Include="Scripts\Kendo\kendo.all.min.js.map" />
     <Content Include="Scripts\Kendo\kendo.aspnetmvc.min.js.map" />
     <Content Include="Views\Shared\DisplayTemplates\Article\ArticleViewModel.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\Article\InputArticleViewModelCreate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Tutorial\InputTutorialViewModelCreate.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Image\ImageViewModel.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Article\ArticleViewModelDetailed.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Image\InputImageViewModellEdit.cshtml" />
-    <Content Include="Views\Shared\EditorTemplates\Article\InputArticleViewModelEdit.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Tutorial\InputTutorialViewModelEdit.cshtml" />
     <Content Include="Views\Comment\_SingleCommentPartial.cshtml" />
     <Content Include="Views\Comment\_EntityCommentsPartial.cshtml" />
     <Content Include="Views\Shared\_PaginationPartial.cshtml" />
@@ -549,10 +568,14 @@
     <Content Include="Views\Shared\_NavbarPartial.cshtml" />
     <Content Include="Views\Home\_PartialSimpleTutorialView.cshtml" />
     <Content Include="Views\Home\_PartialGameCourseSimpleView.cshtml" />
+    <Content Include="Views\FPS\Details.cshtml" />
+    <Content Include="Views\FPS\Index.cshtml" />
+    <Content Include="Views\Tutorial\_TutorialPagedPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\" />
+    <Folder Include="Areas\Users\Models\" />
+    <Folder Include="Areas\Users\Views\Tutorial\" />
     <Folder Include="Content\Kendo\Black\" />
     <Folder Include="Content\Kendo\BlueOpal\" />
     <Folder Include="Content\Kendo\Bootstrap\" />
@@ -574,13 +597,11 @@
     <Folder Include="Content\Kendo\Uniform\" />
     <Folder Include="Views\Academy\" />
     <Folder Include="Views\Base\" />
-    <Folder Include="Views\FPS\" />
     <Folder Include="Views\Shared\DisplayTemplates\Category\" />
     <Folder Include="Views\Shared\DisplayTemplates\Like\" />
     <Folder Include="Views\Shared\EditorTemplates\Category\" />
     <Folder Include="Views\Shared\EditorTemplates\Like\" />
     <Folder Include="Views\Strategy\" />
-    <Folder Include="Views\Tutorial\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
