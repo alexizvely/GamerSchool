@@ -211,6 +211,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Users\Controllers\CommentController.cs" />
     <Compile Include="Areas\Users\Controllers\FPSController.cs" />
+    <Compile Include="Areas\Users\Controllers\StrategyController.cs" />
     <Compile Include="Areas\Users\UsersAreaRegistration.cs" />
     <Compile Include="Areas\Users\ViewModels\Comment\InputCommentViewModelCreate.cs" />
     <Compile Include="Controllers\AboutController.cs" />
@@ -252,6 +253,7 @@
     <Compile Include="ViewModels\GameCourse\SimpleGameCourseViewModel.cs" />
     <Compile Include="ViewModels\Home\IndexViewModel.cs" />
     <Compile Include="ViewModels\Image\ImageViewModel.cs" />
+    <Compile Include="ViewModels\Strategy\StrategyIndexViewModel.cs" />
     <Compile Include="ViewModels\Tutorial\SimpleTutorialViewModel.cs" />
     <Compile Include="ViewModels\Tutorial\TutorialInputViewModel.cs" />
     <Compile Include="ViewModels\Tutorial\TutorialViewModel.cs" />
@@ -464,6 +466,9 @@
     <Content Include="Areas\Users\Views\FPS\Index.cshtml" />
     <Content Include="Areas\Users\Views\FPS\Create.cshtml" />
     <Content Include="Areas\Users\Views\FPS\Edit.cshtml" />
+    <Content Include="Areas\Users\Views\Strategy\Create.cshtml" />
+    <Content Include="Areas\Users\Views\Strategy\Edit.cshtml" />
+    <Content Include="Areas\Users\Views\Strategy\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -571,6 +576,9 @@
     <Content Include="Views\FPS\Details.cshtml" />
     <Content Include="Views\FPS\Index.cshtml" />
     <Content Include="Views\Tutorial\_TutorialPagedPartial.cshtml" />
+    <Content Include="Views\Strategy\Details.cshtml" />
+    <Content Include="Views\Strategy\Index.cshtml" />
+    <Content Include="Views\Tutorial\_StrategyPagedPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -601,7 +609,6 @@
     <Folder Include="Views\Shared\DisplayTemplates\Like\" />
     <Folder Include="Views\Shared\EditorTemplates\Category\" />
     <Folder Include="Views\Shared\EditorTemplates\Like\" />
-    <Folder Include="Views\Strategy\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
