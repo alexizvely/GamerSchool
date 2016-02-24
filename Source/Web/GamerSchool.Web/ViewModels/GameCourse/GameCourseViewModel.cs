@@ -52,7 +52,7 @@
 
         public ICollection<UserViewModel> Trainers { get; set; }
 
-        public ICollection<GameCourseViewModel> Objectives { get; set; }
+        public ICollection<CoursePlan> Objectives { get; set; }
 
         public void CreateMappings(IMapperConfiguration configuration)
         {

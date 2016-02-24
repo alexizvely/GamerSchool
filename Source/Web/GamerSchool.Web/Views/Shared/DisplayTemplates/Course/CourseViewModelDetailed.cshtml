@@ -23,7 +23,7 @@
                         <a href="/Users/Course/Edit/@Model.Id" class="btn btn-md btn-primary">Edit</a>
                     </div>
                     <div class="col-md-4">
-                        @using (Html.BeginForm("Destroy", "Course", new { area = "Users", id = Model.Id }, FormMethod.Post, new { @class = "" }))
+                        @using (Html.BeginForm("Destroy", "GameCourse", new { area = "Users", id = Model.Id }, FormMethod.Post, new { @class = "" }))
                         {
                             @Html.AntiForgeryToken()
                             <input type="submit" value="X" class="btn btn-danger"/>

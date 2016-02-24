@@ -42,7 +42,7 @@
             {
                 CurrentPage = page,
                 TotalPages = totalPages,
-                Path = "/School/Index/"
+                Path = "/Academy/Index/"
             };
 
             var model = new AcademyIndexViewModel()

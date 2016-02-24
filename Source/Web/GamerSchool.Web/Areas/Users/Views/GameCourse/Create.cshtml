@@ -1,0 +1,14 @@
+﻿@using GamerSchool.Web.Infrastructure.Constants
+@model GamerSchool.Web.ViewModels.GameCourse.GameCourseInputModel
+@{
+    ViewBag.Title = "Add new course";
+}
+@using (Html.BeginForm("Create", "Course", FormMethod.Post, new { enctype = "multipart/form-data", @class = "full-width" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.EditorFor(model => Model, EditorTemplatesPaths.CourseInputModelCreate)
+}
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
