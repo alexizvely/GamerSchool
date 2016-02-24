@@ -9,6 +9,8 @@
 
         IQueryable<GameCourse> GetAll();
 
+        IQueryable<GameCourse> GetLatest(int count);
+
         IQueryable<GameCourse> GetByTrainerId(string userId);
 
         IQueryable<GameCourse> GetByStudentId(string userId);

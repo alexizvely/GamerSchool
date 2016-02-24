@@ -7,6 +7,8 @@
 
     public class Tutorial : InteractiveEntity
     {
+
+
         public string AuthorId { get; set; }
 
         public virtual ApplicationUser Author { get; set; }

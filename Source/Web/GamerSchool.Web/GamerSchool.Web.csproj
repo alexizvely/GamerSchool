@@ -244,8 +244,10 @@
     <Compile Include="ViewModels\Comment\CommentInputModel.cs" />
     <Compile Include="ViewModels\Comment\CommentViewModel.cs" />
     <Compile Include="ViewModels\Common\PaginationViewModel.cs" />
+    <Compile Include="ViewModels\GameCourse\SimpleGameCourseViewModel.cs" />
     <Compile Include="ViewModels\Home\IndexViewModel.cs" />
     <Compile Include="ViewModels\Image\ImageViewModel.cs" />
+    <Compile Include="ViewModels\Tutorial\SimpleTutorialViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\backgrounds\bg.jpg" />
@@ -545,6 +547,8 @@
     <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Shared\_NavbarPartial.cshtml" />
+    <Content Include="Views\Home\_PartialSimpleTutorialView.cshtml" />
+    <Content Include="Views\Home\_PartialGameCourseSimpleView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

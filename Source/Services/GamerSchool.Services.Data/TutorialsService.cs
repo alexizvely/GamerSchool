@@ -32,6 +32,15 @@
             return result;
         }
 
+        public IQueryable<Tutorial> GetLatest(int count)
+        {
+            var result = this.articles.All()
+                .OrderByDescending(x => x.CreatedOn)
+                .Take(count);
+
+            return result;
+        }
+
         public IQueryable<Tutorial> GetByUserId(string userId)
         {
             return this.articles.All()

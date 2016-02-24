@@ -1,0 +1,27 @@
+﻿@model IEnumerable<GamerSchool.Web.ViewModels.Tutorial.SimpleTutorialViewModel>
+@{
+    ViewBag.Title = "_PartialSimpleTutorialView";
+}
+<div class="panel-body">
+    <table class="table table-bordered">
+        <tr>
+            <th class="text-center"><small>Title</small></th>
+            <th class="text-center"><small>Description</small></th>
+        </tr>
+        @foreach (var tutorial in Model)
+        {
+            <tr>
+                <td class="text-center">
+                    <a href=@Url.Action("Details", "Articles", new { Id = tutorial.Id }) class="link-custom-color">
+                        @tutorial.Title
+                    </a>
+                </td>
+                <td class="text-center">
+                    <span class="glyphicon glyphicon-comment"></span>
+                    @tutorial.Description
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+

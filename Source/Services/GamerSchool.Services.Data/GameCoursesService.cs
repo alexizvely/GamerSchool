@@ -31,6 +31,15 @@
             return result;
         }
 
+        public IQueryable<GameCourse> GetLatest(int count)
+        {
+            var result = this.courses.All()
+             .OrderByDescending(x => x.CreatedOn)
+             .Take(count);
+
+            return result;
+        }
+
         public IQueryable<GameCourse> GetByTrainerId(string userId)
         {
             return this.courses.All()

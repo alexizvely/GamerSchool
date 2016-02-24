@@ -11,6 +11,8 @@
 
         IQueryable<Tutorial> GetByUserId(string userId);
 
+        IQueryable<Tutorial> GetLatest(int count);
+
         int Create(string title, string description, string authorId);
 
         int Create(Tutorial article);
