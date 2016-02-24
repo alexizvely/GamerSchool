@@ -34,7 +34,9 @@
                 var viewModel = this.Mapper.Map<CommentViewModel>(comment);
                 viewModel.UserName = this.UserProfile.UserName;
 
-                return this.PartialView("~/Views/Comment/_SingleCommentPartial.cshtml", viewModel);
+                return this.RedirectToAction("Index", "FPS", new { area = ""});
+
+                //return this.PartialView("~/Views/Comment/_SingleCommentPartial.cshtml", viewModel);
             }
 
             throw new HttpException(400, "Invalid Comment");
@@ -48,6 +50,8 @@
             return this.GetPageCommentsPartial(articleID);
         }
 
+        [HttpGet]
+        [ChildActionOnly]
         public ActionResult GetPageCommentsPartial(int articleId)
         {
             var comments = this.commentsService
