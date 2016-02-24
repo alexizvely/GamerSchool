@@ -1,0 +1,17 @@
+﻿@using GamerSchool.Common
+@model GamerSchool.Web.ViewModels.Strategy.StrategyIndexViewModel
+@{
+    ViewBag.Title = "Strategy";
+}
+<h2 class="text-center">Strategy</h2>
+<div class="container">
+    @if (Request.IsAuthenticated && (User.IsInRole(ApplicationRoles.Admin) || User.IsInRole(ApplicationRoles.Designer)))
+    {
+        <div calss="row text-center">
+            <div class="col-md-12">
+                <a href="/Users/Strategy/Create" class="btn btn-md btn-primary full-width">Create new Design</a>
+            </div>
+        </div>
+    }
+    @Html.Partial("../Tutorial/_StrategyPagedPartial", Model)
+</div>

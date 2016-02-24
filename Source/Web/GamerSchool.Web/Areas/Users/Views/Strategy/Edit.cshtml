@@ -1,0 +1,15 @@
+﻿@using GamerSchool.Web.Infrastructure.Constants
+@model GamerSchool.Web.ViewModels.Tutorial.TutorialInputViewModel
+@{
+    ViewBag.Title = "Tutorial - Edit existing tutorial";
+}
+@using (Html.BeginForm("Edit", "Design", FormMethod.Post, new { enctype = "multipart/form-data", @class = "full-width" }))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.EditorFor(model => Model, EditorTemplatesPaths.InputTutorialViewModelEdit)
+
+}
+@section scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
