@@ -50,7 +50,7 @@
             {
                 CurrentPage = page,
                 TotalPages = totalPages,
-                Path = "/Users/Design/Index/"
+                Path = "/Users/FPS/Index/"
             };
 
             var model = new FPSIndexViewModel()

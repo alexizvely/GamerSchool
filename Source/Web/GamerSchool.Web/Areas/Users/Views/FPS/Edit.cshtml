@@ -1,4 +1,5 @@
-﻿@model GamerSchool.Web.ViewModels.Tutorial.TutorialInputViewModel
+﻿@using GamerSchool.Web.Infrastructure.Constants
+@model GamerSchool.Web.ViewModels.Tutorial.TutorialInputViewModel
 @{
     ViewBag.Title = "Tutorial - Edit existing tutorial";
 }
@@ -6,7 +7,7 @@
 {
     @Html.AntiForgeryToken()
 
-    @Html.EditorFor(model => Model, EditorTemplatesPaths.InputArticleViewModelEdit)
+    @Html.EditorFor(model => Model, EditorTemplatesPaths.InputTutorialViewModelEdit)
 
 }
 @section scripts {
