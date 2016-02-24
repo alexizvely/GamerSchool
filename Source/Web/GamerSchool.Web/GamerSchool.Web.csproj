@@ -210,6 +210,7 @@
     <Compile Include="App_Start\SmsService.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Users\Controllers\CommentController.cs" />
+    <Compile Include="Areas\Users\Controllers\CourseObjectiveController.cs" />
     <Compile Include="Areas\Users\Controllers\FPSController.cs" />
     <Compile Include="Areas\Users\Controllers\GameCourseController.cs" />
     <Compile Include="Areas\Users\Controllers\StrategyController.cs" />
@@ -597,6 +598,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Users\Models\" />
+    <Folder Include="Areas\Users\Views\CourseObjective\" />
     <Folder Include="Areas\Users\Views\Tutorial\" />
     <Folder Include="Content\Kendo\Black\" />
     <Folder Include="Content\Kendo\BlueOpal\" />
