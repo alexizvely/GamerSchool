@@ -1,0 +1,13 @@
+﻿@using GamerSchool.Common
+@model GamerSchool.Web.ViewModels.School.SchoolIndexViewModel
+<hr />
+@Html.Partial("_PaginationPartial", Model.PaginationModel)
+<div class="row">
+    @foreach (var art in Model.Courses)
+    {
+        <div class="col-md-6">
+            @Html.DisplayFor(model => art, DisplayTemplatesPaths.CourseViewModel)
+        </div>
+    }
+</div>
+@Html.Partial("_PaginationPartial", Model.PaginationModel)

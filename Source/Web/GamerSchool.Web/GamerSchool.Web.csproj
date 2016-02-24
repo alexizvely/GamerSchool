@@ -236,6 +236,7 @@
     <Compile Include="Infrastructure\Validation\ValidateFilesCollectionAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\Academy\AcademyIndexViewModel.cs" />
     <Compile Include="ViewModels\Account\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="ViewModels\Account\ExternalLoginListViewModel.cs" />
     <Compile Include="ViewModels\Account\ForgotPasswordViewModel.cs" />
@@ -249,12 +250,16 @@
     <Compile Include="ViewModels\Comment\CommentViewModel.cs" />
     <Compile Include="ViewModels\Common\PaginationViewModel.cs" />
     <Compile Include="ViewModels\FPS\FPSIndexViewModel.cs" />
+    <Compile Include="ViewModels\GameCourse\CoursePlanViewModel.cs" />
+    <Compile Include="ViewModels\GameCourse\GameCourseViewModel.cs" />
     <Compile Include="ViewModels\GameCourse\SimpleGameCourseViewModel.cs" />
     <Compile Include="ViewModels\Home\IndexViewModel.cs" />
     <Compile Include="ViewModels\Image\ImageViewModel.cs" />
+    <Compile Include="ViewModels\Lesson\LessonViewModel.cs" />
     <Compile Include="ViewModels\Tutorial\SimpleTutorialViewModel.cs" />
     <Compile Include="ViewModels\Tutorial\TutorialInputViewModel.cs" />
     <Compile Include="ViewModels\Tutorial\TutorialViewModel.cs" />
+    <Compile Include="ViewModels\User\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\backgrounds\bg.jpg" />
@@ -571,6 +576,10 @@
     <Content Include="Views\FPS\Details.cshtml" />
     <Content Include="Views\FPS\Index.cshtml" />
     <Content Include="Views\Tutorial\_TutorialPagedPartial.cshtml" />
+    <Content Include="Views\Academy\Index.cshtml" />
+    <Content Include="Views\Academy\_CoursesPagedPartial.cshtml" />
+    <Content Include="Views\Academy\CourseDetails.cshtml" />
+    <Content Include="Views\Academy\CourseObjectiveDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -595,12 +604,12 @@
     <Folder Include="Content\Kendo\Silver\" />
     <Folder Include="Content\Kendo\textures\" />
     <Folder Include="Content\Kendo\Uniform\" />
-    <Folder Include="Views\Academy\" />
     <Folder Include="Views\Base\" />
     <Folder Include="Views\Shared\DisplayTemplates\Category\" />
     <Folder Include="Views\Shared\DisplayTemplates\Like\" />
     <Folder Include="Views\Shared\EditorTemplates\Category\" />
     <Folder Include="Views\Shared\EditorTemplates\Like\" />
+    <Folder Include="Views\Shared\EditorTemplates\School\" />
     <Folder Include="Views\Strategy\" />
   </ItemGroup>
   <ItemGroup>
